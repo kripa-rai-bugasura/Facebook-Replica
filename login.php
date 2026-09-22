@@ -284,6 +284,10 @@ function render_error(string $message)
 				$("#login_form").submit();
 			})
 
+			$('a[href="#"]').on('click', function(e) {
+				e.preventDefault();
+			})
+
 			//toggle show or hide password icon
 			$("#pwd").on('input', function() {
 
