@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	include 'db.php';
+	include('../db.php');
 	$user_id = isset($_GET["user_id"])? $_GET["user_id"] : '';
 	$user_stmt = mysqli_prepare($conn, "SELECT 
 									*
@@ -64,6 +64,7 @@
 </div>
 
 <script>
+	//On clicking photos header make photos nav link active and take to photos tab
 	$(document).ready(function(){
 		$(".photos-tab .header").click(function() {
 			$(".photos-tab .header").removeClass("active-header");
@@ -71,6 +72,7 @@
 		});
 	})
 
+	//On clicking tab header make that tab nav link active and take to the tab
 	$(".header-tab a").click(function(){
 		var xhttp = new XMLHttpRequest();
 		var tab = $(this).text().toLowerCase();

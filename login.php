@@ -279,7 +279,9 @@ function render_error(string $message)
 	</div>
 	<script>
 		$(document).ready(function() {
-			$("#login_id input").focus();
+			$("#login_id input").focus();  //focus input on page load
+
+			//login form submission
 			$("#login_button").on('click', function() {
 				$("#login_form").submit();
 				// $("#login_id_box").removeClass("error-container");
@@ -291,6 +293,7 @@ function render_error(string $message)
 				// }
 			})
 
+			//toggle show or hide password icon
 			$("#pwd").on('input', function() {
 
 				if ($(this).val().length > 0) {
@@ -313,6 +316,8 @@ function render_error(string $message)
 					$("#eye").hide();
 				}
 			})
+
+			//show or hide password
 			$("#eye-icon").on('click', function() {
 				var inp = $("#pwd");
 				console.log(inp);

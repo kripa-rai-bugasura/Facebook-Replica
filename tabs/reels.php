@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	include 'db.php';
+	include('../db.php');
 	$user_id = isset($_GET["user_id"])? $_GET["user_id"] : '';
 	$user_stmt = mysqli_prepare($conn, "SELECT 
 									*
@@ -105,6 +105,7 @@
 			$(this).addClass("active-header");
 		});
 
+		// On clicking the tabs header take to respective tab
 		$(".header-tab a").click(function(){
 			var xhttp = new XMLHttpRequest();
 			var tab = $(this).text().toLowerCase();

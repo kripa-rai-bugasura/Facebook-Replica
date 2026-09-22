@@ -1,6 +1,6 @@
 <?php 
 	session_start();
-	include 'db.php';
+	include('../db.php');
 	$user_id = isset($_GET["user_id"])? $_GET["user_id"] : '';
 
 	$user_stmt = mysqli_prepare($conn, "SELECT 
@@ -144,6 +144,8 @@
 					
 <script>
 	$(document).ready(function(){
+
+		//make clicked link active on navigation
 		$("#nav_links a").click(function(event) {
 			event.preventDefault();
 
@@ -155,6 +157,7 @@
 			$(target).show(); 
 		});
 
+		//On clicking photos header make photos nav link active and take to photos tab
 		$(".photos-tab .header").click(function() {
 			$(".photos-tab .header").removeClass("active-header");
 			$(this).addClass("active-header");
@@ -171,16 +174,6 @@
 			xhttp.open("GET",`tabs/${tab}.php?user_id=<?php echo $user_id;?>`, true);
 			xhttp.send();
 		})
-
-		// var xhttp = new XMLHttpRequest();
-		// xhttp.onreadystatechange = function() {
-		// 	if(this.readyState == 4 && this.status == 200) {
-		// 		$("#about").after(this.responseText);
-		// 	}
-		// };
-
-		// xhttp.open("GET",`reels.php?user_id=<?php echo $user_id;?>`, true);
-		// xhttp.send();
 	})
 	
 

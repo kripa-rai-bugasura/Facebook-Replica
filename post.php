@@ -2,7 +2,6 @@
 	include 'db.php';
 
 	$user_id = isset($_GET["user_id"])? intval($_GET["user_id"]) : 0;
-	$logged_user_id = isset($_SESSION['id'])? $_SESSION['id']: '';
 	$post = isset($_POST["post"]) ? test_input($_POST["post"]) : '';
 
 	if($user_id>0 && !empty($post))
@@ -12,11 +11,6 @@
 		mysqli_stmt_execute($user_stmt);
 		$user_res = mysqli_stmt_get_result($user_stmt);
 		$user = mysqli_fetch_assoc($user_res);
-
-		mysqli_stmt_bind_param($user_stmt , "i", $logged_user_id);
-		mysqli_stmt_execute($user_stmt);
-		$new_res = mysqli_stmt_get_result($user_stmt);
-		$logged_user = mysqli_fetch_assoc($new_res);
 
 		// add post to the wall
 		$current_time = date("Y-m-d H:i:s");
@@ -123,7 +117,7 @@
 							</div>
 							<div class='comments'>
 								<div class="user-img">
-									<img src="images/<?php echo $logged_user['photo'];?>" height="32" width="32"/>
+									<img src="images/<?php echo $user['photo'];?>" height="32" width="32"/>
 									<div class="dropdown">
 										<svg viewBox="0 0 16 16" width="12" height="12" fill="currentColor" aria-hidden="true" class="x14rh7hd x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq" style="--x-color: var(--primary-icon);">
 											<g fill-rule="evenodd" transform="translate(-448 -544)">
@@ -162,6 +156,7 @@
 		$data = htmlspecialchars($data);
 		return $data;
 	};
+
 
 ?>
 

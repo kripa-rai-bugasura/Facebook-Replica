@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	include 'db.php';
+	include('../db.php');
 	$user_id = isset($_GET["user_id"])? $_GET["user_id"] : '';
 	$logged_user_id = isset($_SESSION['id'])? $_SESSION['id']: '';
 
@@ -14,6 +14,7 @@
 									User
 								WHERE
 									id = ?;");
+
 	$frnd_stmt = mysqli_prepare($conn, "SELECT
 											person2
 										FROM
@@ -521,6 +522,7 @@
 			</div>		
 	</div>
 	<script>
+		//On clicking see all photos make photos nav link active and take to photos tab
 		$(document).ready( function() {
 			$(".photos-link").click( function(){
 				var xhttp = new XMLHttpRequest();
@@ -533,6 +535,7 @@
 				xhttp.send();
 			})
 
+			//On clicking photos header make photos nav link active and take to photos tab
 			$(".left-header-photos").click( function(){
 				var xhttp = new XMLHttpRequest();
 				$(".tab-link ").removeClass("selected"); 
@@ -544,6 +547,8 @@
 				xhttp.send();
 			})
 
+
+			// disable post button until something is typed in
 			$(document).ready(function() {
 				$('.new-post-input').on('input', function() {
 					if ($.trim($(this).val()) === '') {
@@ -554,14 +559,18 @@
 				});
 			});
 
+			//open post modal and foucs input
 			$(".create-post-button").click(function(e) {
 				$(".backdrop").toggleClass("hidden-class");
 				$("#new_post").focus();
 			})
 
+			// close modal
 			$(".modal-header-svg").click(function()	{
 				$(".backdrop").addClass("hidden-class");
 			})
+
+			//post
 			$(".post-button").click(function(e){
 
 				// prevent default behavior on submit
@@ -580,7 +589,7 @@
 						$(".backdrop").addClass("hidden-class");
 					}
 				}
-				xmlhttp.open("POST","tabs/post.php?user_id=" + <?php echo $user_id?> ,true);
+				xmlhttp.open("POST","./post.php?user_id=" + <?php echo $user_id?> ,true);
 				xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 				xmlhttp.send("post="+encodeURIComponent(post));
 				

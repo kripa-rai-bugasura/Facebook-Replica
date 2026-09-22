@@ -1,5 +1,5 @@
 <?php
-	include 'db.php';
+	include('../db.php');
 	$user_id = isset($_GET["user_id"])? $_GET["user_id"] : '';
 	$user_stmt = mysqli_prepare($conn, "SELECT 
 									*
@@ -74,6 +74,8 @@
 </div>
 
 <script>
+
+//friends search functionality
 $(document).ready(function() {
 	$('#search').on('input', function() {
 		var value = $(this).val().toLowerCase();

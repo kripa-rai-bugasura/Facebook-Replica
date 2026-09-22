@@ -351,7 +351,7 @@
 									</div>
 								</div>
 							</div>
-							<div id="info_container">
+							<div class="info-container">
 								<div id="info">
 									<div id="info_top">
 										<div id="info_left">
@@ -361,7 +361,7 @@
 														<div>
 															<!-- <span><h1><?php echo htmlspecialchars($user['name']) ?></h1></span> -->
 															<span>
-																Mark Zuckerberg <span><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" role="img" title="Verified account">
+																<?php echo htmlspecialchars($user['name']) ?> <span><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" role="img" title="Verified account">
 																	<title>Verified account</title>
 																	<path d="M8.004 1.183a1.5 1.5 0 0 1 2.049-.55L12 1.759 13.947.634a1.5 1.5 0 0 1 2.05.549L17.045 3H19.5A1.5 1.5 0 0 1 21 4.5v2.453l1.817 1.05a1.5 1.5 0 0 1 .55 2.049L22.241 12l1.124 1.947a1.5 1.5 0 0 1-.55 2.05L21 17.044V19.5a1.5 1.5 0 0 1-1.5 1.5h-2.454l-1.05 1.817a1.5 1.5 0 0 1-2.048.549L12 22.241l-1.948 1.125a1.5 1.5 0 0 1-2.049-.549L6.955 21H4.5A1.5 1.5 0 0 1 3 19.5v-2.455l-1.817-1.049a1.5 1.5 0 0 1-.549-2.049L1.758 12 .634 10.053a1.5 1.5 0 0 1 .549-2.05L3 6.954V4.5A1.5 1.5 0 0 1 4.5 3h2.454l1.05-1.817zm9.703 9.024a1 1 0 0 0-1.414-1.414l-5.44 5.44a.5.5 0 0 1-.707 0l-2.439-2.44a1 1 0 0 0-1.414 1.414l2.44 2.44a2.5 2.5 0 0 0 3.535 0l5.44-5.44z"></path>
 																</svg></span>
@@ -410,25 +410,25 @@
 									<div class="info-extras">
 										<div class="extras-container">
 												<span>
-													<span><img height="12" width="12" class="xz74otr x15mokao x1ga7v0g x16uus16 xbiv7yw x1b0d499 xep6ejk" alt="" aria-hidden="true" referrerpolicy="origin-when-cross-origin" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cpath d='M7.43 3h9.14c1.355 0 2.471 0 3.355.119.928.124 1.747.396 2.403 1.053.657.656.928 1.475 1.053 2.403.12.884.119 2 .119 3.354v4.141c0 1.355 0 2.471-.119 3.355-.125.928-.396 1.747-1.053 2.403-.656.657-1.475.928-2.403 1.053-.884.12-2 .119-3.354.119H7.429c-1.354 0-2.47 0-3.354-.119-.928-.125-1.747-.396-2.403-1.053-.657-.656-.929-1.475-1.053-2.403-.12-.884-.119-2-.119-3.354V9.929c0-1.354 0-2.47.119-3.354.124-.928.396-1.747 1.053-2.403.656-.657 1.475-.928 2.403-1.053.884-.12 2-.119 3.354-.119ZM21.4 6.841c-.096-.706-.263-1.033-.486-1.255-.222-.223-.55-.39-1.255-.485-.584-.079-1.324-.096-2.328-.1L19.731 8h1.751a11.546 11.546 0 0 0-.082-1.16ZM12.08 5l2.4 3h2.689l-2.4-3h-2.688Z'/%3E %3C/svg%3E"></span>
+													<span class="extras-img"><img height="12" width="12" class="xz74otr x15mokao x1ga7v0g x16uus16 xbiv7yw x1b0d499 xep6ejk" alt="" aria-hidden="true" referrerpolicy="origin-when-cross-origin" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cpath d='M7.43 3h9.14c1.355 0 2.471 0 3.355.119.928.124 1.747.396 2.403 1.053.657.656.928 1.475 1.053 2.403.12.884.119 2 .119 3.354v4.141c0 1.355 0 2.471-.119 3.355-.125.928-.396 1.747-1.053 2.403-.656.657-1.475.928-2.403 1.053-.884.12-2 .119-3.354.119H7.429c-1.354 0-2.47 0-3.354-.119-.928-.125-1.747-.396-2.403-1.053-.657-.656-.929-1.475-1.053-2.403-.12-.884-.119-2-.119-3.354V9.929c0-1.354 0-2.47.119-3.354.124-.928.396-1.747 1.053-2.403.656-.657 1.475-.928 2.403-1.053.884-.12 2-.119 3.354-.119ZM21.4 6.841c-.096-.706-.263-1.033-.486-1.255-.222-.223-.55-.39-1.255-.485-.584-.079-1.324-.096-2.328-.1L19.731 8h1.751a11.546 11.546 0 0 0-.082-1.16ZM12.08 5l2.4 3h2.689l-2.4-3h-2.688Z'/%3E %3C/svg%3E"></span>
 													<span>Public figure</span>
 												</span>
 										</div>
 										<div class="extras-container">
 											<span>
-												<span><img height="12" width="12" class="xz74otr x15mokao x1ga7v0g x16uus16 xbiv7yw x1b0d499 xep6ejk" alt="" aria-hidden="true" referrerpolicy="origin-when-cross-origin" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cpath d='M12 .5a9 9 0 0 0-9 9c0 2.64 1.351 5.422 2.859 7.736 1.529 2.347 3.325 4.37 4.418 5.522a2.365 2.365 0 0 0 3.446 0c1.093-1.152 2.89-3.175 4.418-5.522C19.65 14.922 21 12.14 21 9.5a9 9 0 0 0-9-9Zm0 4.999a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z'/%3E %3C/svg%3E"></span>
+												<span class="extras-img"><img height="12" width="12" class="xz74otr x15mokao x1ga7v0g x16uus16 xbiv7yw x1b0d499 xep6ejk" alt="" aria-hidden="true" referrerpolicy="origin-when-cross-origin" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cpath d='M12 .5a9 9 0 0 0-9 9c0 2.64 1.351 5.422 2.859 7.736 1.529 2.347 3.325 4.37 4.418 5.522a2.365 2.365 0 0 0 3.446 0c1.093-1.152 2.89-3.175 4.418-5.522C19.65 14.922 21 12.14 21 9.5a9 9 0 0 0-9-9Zm0 4.999a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z'/%3E %3C/svg%3E"></span>
 												<span>Palo Alto, CA</span>
 											</span>
 										</div>
 										<div class="extras-container">
 											<span>
-												<span><img height="12" width="12" class="xz74otr x15mokao x1ga7v0g x16uus16 xbiv7yw x1b0d499 xep6ejk" alt="" aria-hidden="true" referrerpolicy="origin-when-cross-origin" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cpath d='M7 .5a1 1 0 0 0-1 1V4a2 2 0 0 0-2 2v1h-.5A2.5 2.5 0 0 0 1 9.5v11A2.5 2.5 0 0 0 3.5 23h17a2.5 2.5 0 0 0 2.5-2.5V6.015a2.5 2.5 0 0 0-1.572-2.32l-7-2.8A2.5 2.5 0 0 0 11 3.214V7h-1V6a2 2 0 0 0-2-2V1.5a1 1 0 0 0-1-1ZM3.5 9h2.55c-.033.162-.05.329-.05.5V21H3.5a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5Zm10.186-6.249 7 2.8a.5.5 0 0 1 .314.464V20.5a.5.5 0 0 1-.5.5H18V9.5A2.5 2.5 0 0 0 15.5 7H13V3.215a.5.5 0 0 1 .686-.464ZM10 12a1 1 0 0 1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1Zm0 3.5a1 1 0 0 1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1Z'/%3E %3C/svg%3E"></span>
+												<span class="extras-img"><img height="12" width="12" class="xz74otr x15mokao x1ga7v0g x16uus16 xbiv7yw x1b0d499 xep6ejk" alt="" aria-hidden="true" referrerpolicy="origin-when-cross-origin" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cpath d='M7 .5a1 1 0 0 0-1 1V4a2 2 0 0 0-2 2v1h-.5A2.5 2.5 0 0 0 1 9.5v11A2.5 2.5 0 0 0 3.5 23h17a2.5 2.5 0 0 0 2.5-2.5V6.015a2.5 2.5 0 0 0-1.572-2.32l-7-2.8A2.5 2.5 0 0 0 11 3.214V7h-1V6a2 2 0 0 0-2-2V1.5a1 1 0 0 0-1-1ZM3.5 9h2.55c-.033.162-.05.329-.05.5V21H3.5a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5Zm10.186-6.249 7 2.8a.5.5 0 0 1 .314.464V20.5a.5.5 0 0 1-.5.5H18V9.5A2.5 2.5 0 0 0 15.5 7H13V3.215a.5.5 0 0 1 .686-.464ZM10 12a1 1 0 0 1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1Zm0 3.5a1 1 0 0 1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1Z'/%3E %3C/svg%3E"></span>
 												<span>Meta</span>
 											</span>
 										</div>
 										<div class="extras-container">
 											<span>
-												<span><img height="12" width="12" class="xz74otr x15mokao x1ga7v0g x16uus16 xbiv7yw x1b0d499 xep6ejk" alt="" aria-hidden="true" referrerpolicy="origin-when-cross-origin" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cpath d='M13.387 2.223a2.5 2.5 0 0 0-2.774 0L.945 8.668a1 1 0 0 0 0 1.664l9.668 6.445.015.01.54.36a1.5 1.5 0 0 0 1.664 0l.546-.364.009-.006 8.113-5.409V14a1 1 0 1 0 2 0V9.5a.995.995 0 0 0-.456-.84l-9.657-6.437Z'/%3E %3Cpath d='M4 16.833v-2.662l6.336 4.224a3 3 0 0 0 3.328 0L20 14.171v2.662a1 1 0 0 1-.445.832l-6.168 4.112a2.5 2.5 0 0 1-2.774 0l-6.168-4.112A1 1 0 0 1 4 16.833Z'/%3E %3C/svg%3E"></span>
+												<span class="extras-img"><img height="12" width="12" class="xz74otr x15mokao x1ga7v0g x16uus16 xbiv7yw x1b0d499 xep6ejk" alt="" aria-hidden="true" referrerpolicy="origin-when-cross-origin" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cpath d='M13.387 2.223a2.5 2.5 0 0 0-2.774 0L.945 8.668a1 1 0 0 0 0 1.664l9.668 6.445.015.01.54.36a1.5 1.5 0 0 0 1.664 0l.546-.364.009-.006 8.113-5.409V14a1 1 0 1 0 2 0V9.5a.995.995 0 0 0-.456-.84l-9.657-6.437Z'/%3E %3Cpath d='M4 16.833v-2.662l6.336 4.224a3 3 0 0 0 3.328 0L20 14.171v2.662a1 1 0 0 1-.445.832l-6.168 4.112a2.5 2.5 0 0 1-2.774 0l-6.168-4.112A1 1 0 0 1 4 16.833Z'/%3E %3C/svg%3E"></span>
 												<span>Harvard University</span>
 											</span>
 										</div>
@@ -548,6 +548,7 @@
 		$(document).ready(function() {
 			var navTopPosition = $("#nav_bar").offset().top;
 
+			//make navigation bar sticky
 			$(window).scroll(function() {
 				var currentScroll = $(window).scrollTop();
 
@@ -558,13 +559,16 @@
 				}
 			});
 
+
+			//get posts tab content
 			var xhttp = new XMLHttpRequest();
 			xhttp.onreadystatechange = function() {
 				$("#content").html(this.responseText); 
 			};
-			xhttp.open("GET",`../tabs/posts.php?user_id=<?php echo $user_id;?>`, true);
+			xhttp.open("GET",`tabs/posts.php?user_id=<?php echo $user_id;?>`, true);
 			xhttp.send();
 
+			//On clicking tab nav link make nav link active and take to respective tab
 			$(".tab-link").click(function(event) {
 				event.preventDefault();
 
@@ -581,16 +585,18 @@
 					xhttp.onreadystatechange = function() {
 						$("#content").html(this.responseText); 
 					};
-					xhttp.open("GET",`../tabs/${tab}.php?user_id=<?php echo $user_id;?>`, true);
+					xhttp.open("GET", `tabs/${tab}.php?user_id=<?php echo $user_id;?>`, true);
 					xhttp.send(); 
 				}
 			});
 
+			//On clicking see photos tab header make photos nav link active and take to photos tab
 			$(".photos-tab .header").click(function() {
 				$(".photos-tab .header").removeClass("active-header");
 				$(this).addClass("active-header");
 			});
 
+			//login form submission
 			$(".submit").on('click', function() {
 				$("#login_form").submit();
 				// $("#login_id_box").removeClass("error-container");
@@ -602,10 +608,12 @@
 				// }
 			})
 
+			//open or close settings box
 			$(".profile-picture").click(function(){
 				$(".settings-box").toggleClass("display-box");
 			})
 
+			//go to logged user profile
 			$(".shown-profile").click(function(){
 				var loc ="index.php?user_id=<?php echo $logged_user_id?>";
 				window.location.href = loc;
