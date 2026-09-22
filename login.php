@@ -4,7 +4,7 @@ session_start();
 if(isset($_SESSION['id']))
 {
 	$id = $_SESSION['id'];
-	header("Location: profile.php?user_id=" . urlencode($id));
+	header("Location: index.php?user_id=" . urlencode($id));
 	exit;
 }
 
