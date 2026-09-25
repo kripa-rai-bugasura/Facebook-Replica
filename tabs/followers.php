@@ -62,9 +62,9 @@
 				$name = explode(" ",$person['name'])[0];
 			?>
 				<div class="frnd-card">
-					<a href="index.php?user_id=<?php echo $frnd['person2']?>">
-						<div><img src="images/<?php echo $person['photo']; ?>" alt="<?php echo $name?>'s photo"/></div>
-						<div class="frnd-name"><span><?php echo $person['name']; ?></span></div>
+					<a href="index.php?user_id=<?php echo htmlspecialchars($frnd['person2'])?>">
+						<div><img src="images/<?php echo htmlspecialchars($person['photo']); ?>" alt="<?php echo htmlspecialchars($name)?>'s photo"/></div>
+						<div class="frnd-name"><span><?php echo htmlspecialchars($person['name']); ?></span></div>
 					</a>
 				</div>
 			<?php } ?>

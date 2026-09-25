@@ -89,7 +89,7 @@
 				<div class="tab-card posts-tab-inner">
 					<div class="posts-card">
 						<div class="card">
-							<div class='content'><p><?php echo $post; ?></p></div>
+							<div class='content'><p><?php echo htmlspecialchars($post); ?></p></div>
 							
 							<div class="bar">
 								<div class="activity-stat">
@@ -118,7 +118,7 @@
 							</div>
 							<div class='comments'>
 								<div class="user-img">
-									<img src="images/<?php echo $user['photo'];?>" height="32" width="32"/>
+									<img src="images/<?php echo htmlspecialchars($user['photo']);?>" height="32" width="32"/>
 									<div class="dropdown">
 										<svg viewBox="0 0 16 16" width="12" height="12" fill="currentColor" aria-hidden="true" class="x14rh7hd x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq" style="--x-color: var(--primary-icon);">
 											<g fill-rule="evenodd" transform="translate(-448 -544)">

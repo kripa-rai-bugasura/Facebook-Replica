@@ -1,8 +1,10 @@
 <?php
-	$servername = "localhost";
-	$username = "fb_user";
-	$password = "fb@Bugasura26";
-	$dbname = "facebook";
+
+	$config = require('config.php');
+	$servername = $config['servername'];
+	$username = $config['username'];
+	$password = $config['password'];
+	$dbname = $config['dbname'];
 
 	// connect to the database
 	$conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -11,4 +13,3 @@
 		die("Connection failed: " .  mysqli_connect_error());
 	}
 ?>
-

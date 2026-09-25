@@ -31,11 +31,11 @@
 		</div>
 		<div class="second-header">
 			<div class="header active-header">
-				<span><?php echo $first_name;?>'s Photos</span>
+				<span><?php echo htmlspecialchars($first_name);?>'s Photos</span>
 				<div class="content-link"></div>
 			</div>
 			<div class="header">
-				<span>Photos of <?php echo $first_name;?></span>
+				<span>Photos of <?php echo htmlspecialchars($first_name);?></span>
 				<div class="content-link"></div>
 			</div>
 			<div class="header">
@@ -54,7 +54,7 @@
 					while($photo = mysqli_fetch_assoc($photos_res)){
 				?>
 					<div class="photo-card">
-						<div><img src="images/<?php echo $photo['image']; ?>" alt="<?php echo $first_name?>'s photo"/></div>
+						<div><img src="images/<?php echo htmlspecialchars($photo['image']); ?>" alt="<?php echo htmlspecialchars($first_name)?>'s photo"/></div>
 					</div>
 				<?php } ?>
 			</div>

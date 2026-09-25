@@ -180,7 +180,7 @@
 					</div>
 				</div>
 				<div class="profile-picture">
-					<img src="images/<?php echo $user['photo']?>" height="40" width="40">
+					<img src="images/<?php echo htmlspecialchars($user['photo'])?>" height="40" width="40">
 					<div class="dropdown">
 						<svg viewBox="0 0 16 16" width="12" height="12" fill="currentColor" aria-hidden="true" class="x14rh7hd x1lliihq x1tzjh5l x1k90msu x2h7rmj x1qfuztq" style="--x-color: var(--primary-icon);">
 							<g fill-rule="evenodd" transform="translate(-448 -544)">
@@ -193,9 +193,9 @@
 					<div class="all-profiles">
 						<div class="shown-profile">
 							<div class="shown-profile-img">
-								<img src="images/<?php echo $logged_user['photo']?>" height="38" width="38"/>
+								<img src="images/<?php echo htmlspecialchars($logged_user['photo'])?>" height="38" width="38"/>
 							</div>
-							<div class="shown-profile-name"><span><?php echo $logged_user['name'];?></span></div>
+							<div class="shown-profile-name"><span><?php echo htmlspecialchars($logged_user['name']);?></span></div>
 							<div class="shown-profile-hover"></div>
 						</div>
 						<hr class="all-profiles-ruler">
@@ -369,7 +369,7 @@
 												</div>
 											</div>
 											<div id="frnds">
-												<span><a href="index.php?user_id=<?php echo $user_id?>&tab=followers"><strong>121M</strong> followers</a></span>
+												<span><a href="javascript:void(0)" class="frnds-link"><strong>121M</strong> followers</a></span>
 
 											</div>
 										</div>
@@ -563,9 +563,7 @@
 			//On clicking tab nav link make nav link active and take to respective tab
 			$(".tab-link").click(function(event) {
 				event.preventDefault();
-
 				$(".tab-link ").removeClass("selected"); 
-				console.log($(".tab-link"));
 
 				if(!($(this).hasClass("unselected"))) {
 					$(this).addClass("selected");  
@@ -587,6 +585,17 @@
 				$(".photos-tab .header").removeClass("active-header");
 				$(this).addClass("active-header");
 			});
+
+			$(".frnds-link").click(function() {
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+					$(".tab-link ").removeClass("selected"); 
+					$(".followers-link").addClass("selected"); 
+					$("#content").html(this.responseText); 
+				};
+				xhttp.open("GET", `tabs/followers.php?user_id=<?php echo $user_id;?>`, true);
+				xhttp.send();
+			})
 
 			//login form submission
 			$(".submit").on('click', function() {
